@@ -1,14 +1,14 @@
 import React from 'react'
-import Hero from '../componenets/Hero'
-import HomeCards from '../componenets/HomeCards'
-import JobListings from '../componenets/JobListings'
-import ViewAllJobs from '../componenets/ViewAllJobs'
+import Hero from '../components/Hero'
+import HomeCards from '../components/HomeCards'
+import JobListings from '../components/JobListings'
+import ViewAllJobs from '../components/ViewAllJobs'
 const HomePage = () => {
   return (
     <>
         <Hero />
         <HomeCards />
-        <JobListings />
+        <JobListings isHome={true}/>
         <ViewAllJobs />
     </>
   )

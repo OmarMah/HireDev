@@ -1,7 +1,8 @@
 import React from 'react'
 import {useState} from  'react'
+import { useNavigate } from 'react-router-dom'
 
-const AddJobPage = () => {
+const AddJobPage = ({addJobSubmit}) => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [type, setType] = useState('Full-Time')
@@ -11,6 +12,31 @@ const AddJobPage = () => {
     const [companyDescription, setCompanyDescription] = useState('')
     const [contactEmail, setContactEmail] = useState('')
     const [contactPhone, setContactPhone] = useState('')
+
+    const navigate = useNavigate()
+
+    const submitForm = (e) => {
+        e.preventDefault()
+        const newJob = {
+            title,
+            description,
+            type,
+            salary,
+            location,
+            company: {
+                name: companyName,
+                description: companyDescription,
+                contactEmail,
+                contactPhone
+            }
+        }
+
+
+        addJobSubmit(newJob);
+
+        return navigate('/jobs')
+    }
+
   return (
     <>
       <section className="bg-indigo-50">
@@ -18,7 +44,7 @@ const AddJobPage = () => {
         <div
           className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0"
         >
-          <form>
+          <form onSubmit={submitForm}>
             <h2 className="text-3xl text-center font-semibold mb-6">Add Job</h2>
 
             <div className="mb-4">
@@ -67,6 +93,8 @@ const AddJobPage = () => {
                 className="border rounded w-full py-2 px-3"
                 rows="4"
                 placeholder="Add any job duties, expectations, requirements, etc"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
               ></textarea>
             </div>
 

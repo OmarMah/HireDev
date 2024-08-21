@@ -1,5 +1,5 @@
 {
-  "jobs" : [
+  "jobs": [
     {
       "id": "1",
       "title": "Senior React Developer",
@@ -83,5 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "3be1",
+      "title": "Omar Job",
+      "description": "",
+      "type": "Full-Time",
+      "salary": "Under $50K",
+      "location": "Giza,EG",
+      "company": {
+        "name": "MaestroXII",
+        "description": "oh my god",
+        "contactEmail": "omar@gmail.com",
+        "contactPhone": "555-555-555"
+      }
     }
-  ]}
+  ]
+}

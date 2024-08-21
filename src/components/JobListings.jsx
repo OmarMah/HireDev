@@ -10,10 +10,10 @@ const JobListings = ({ isHome = false }) => {
     jobs = isHome ? jobs.slice(0, 3) : jobs;
 
     useEffect(() => {
-        const fetchJos = async () => {
+        const fetchJobs = async () => {
 
           try {
-            const res = await fetch('http://localhost:8000/jobs');
+            const res = await fetch('/api/jobs');
             const data = await res.json();
             setJobs(data);
           } catch (error) {
@@ -24,7 +24,7 @@ const JobListings = ({ isHome = false }) => {
 
         }
 
-        fetchJos();
+        fetchJobs();
     }, []);
   return (
     <section className="bg-blue-50 px-4 py-10">

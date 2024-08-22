@@ -6,7 +6,7 @@ import JobsPage from './pages/JobsPage'
 import JobPage, { jobLoader } from './pages/JobPage'
 import AddJobPage from './pages/AddJobPage'
 import NotFoundPage from './pages/NotFoundPage'
-
+import { toast } from 'react-toastify'
 
 
 const App = () => {
@@ -19,6 +19,9 @@ const App = () => {
       },
       body: JSON.stringify(job)
     })
+
+    toast.success('Job added successfully');
+    
     return;
   }
 

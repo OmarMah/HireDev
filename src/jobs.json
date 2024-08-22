@@ -83,20 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "ceea",
-      "title": "Omar's New Job",
-      "description": "This is my job's description",
-      "type": "Part-Time",
-      "salary": "Under $50K",
-      "location": "Giza,EG",
-      "company": {
-        "name": "MaestroXII",
-        "description": "This company is awesome",
-        "contactEmail": "omar@gmail.com",
-        "contactPhone": "555-555-555"
-      }
     }
   ]
 }

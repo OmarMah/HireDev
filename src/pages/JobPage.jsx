@@ -3,6 +3,7 @@ import { useParams, useLoaderData } from 'react-router-dom'
 import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 
 const JobPage = ({deleteJob}) => {
@@ -16,6 +17,8 @@ const JobPage = ({deleteJob}) => {
         if(!confirmDelete) return
 
         await deleteJob(jobId);
+
+        toast.success('Job deleted error');
 
         navigate('/jobs');
         
